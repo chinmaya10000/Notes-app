@@ -4,4 +4,4 @@ services:
   web:
     image: chinmayapradhan/reddit-clone-app:lts
     ports:
-      - "8080:8080"
+      - "8000:8000"
