@@ -9,7 +9,7 @@ pipeline {
                     echo "building the docker image.."
                     withCredentials([usernamePassword(credentialsId: 'docker-hub-repo', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
                         sh 'docker build -t chinmayapradhan/reddit-app:1.0 .'
-                        sh "echo $PASS | docker login -u $USER --passowrd-stdin"
+                        sh "echo $PASS | docker login -u $USER --password-stdin"
                         sh 'docker push chinmayapradhan/reddit-app:1.0'
                     }
                 }
