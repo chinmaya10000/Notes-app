@@ -2,6 +2,6 @@ version: '3'
 
 services:
   web:
-    image: chinmayapradhan/reddit-clone-app:lts
+    image: chinmayapradhan/reddit-app:1.0
     ports:
       - "8000:8000"
