@@ -9,8 +9,8 @@ def buildImage() {
 def deployApp() {
     echo "Deploy docker image to EC2.."
 
-    def dockerCmd = "docker run -d -p 8000:8000 chinmayapradhan/reddit-app:1.0"
+    def dockerComposeCmd = "docker-compose up -d"
     sshagent(['ec2-server-key']) {
-        sh "ssh -o StrictHostKeyChecking=no ec2-user@3.19.141.157 '${dockerCmd}'"
+        sh "ssh -o StrictHostKeyChecking=no ec2-user@3.19.141.157 '${dockerComposeCmd}'"
     }
 }
