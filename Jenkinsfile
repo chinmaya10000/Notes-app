@@ -8,6 +8,7 @@ pipeline {
             steps {
                 script {
                     gv = load "script.groovy"
+                }
             }
         }
         stage('Build and Push') {
